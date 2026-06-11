@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Student Management System</h1>
+
+    <div class="form-container">
+
+        <h2>Add / Edit Student</h2>
+
+        <input type="number" id="rollNo" placeholder="Roll Number">
+
+        <input type="text" id="studentName" placeholder="Student Name">
+
+        <select id="attendance">
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+
+        <input type="number" id="math" placeholder="Math Marks">
+
+        <input type="number" id="science" placeholder="Science Marks">
+
+        <input type="number" id="english" placeholder="English Marks">
+
+        <button onclick="addStudent()">Save Student</button>
+
+        <br><br>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search by Roll Number or Name"
+            onkeyup="loadStudents()">
+
+    </div>
+
+    <h2>Attendance Records</h2>
+
+    <table id="attendanceTable">
+        <tr>
+            <th>Roll No</th>
+            <th>Student Name</th>
+            <th>Attendance</th>
+        </tr>
+    </table>
+
+    <h2>Marks Records</h2>
+
+    <table id="marksTable">
+        <tr>
+            <th>Roll No</th>
+            <th>Student Name</th>
+            <th>Math</th>
+            <th>Science</th>
+            <th>English</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
