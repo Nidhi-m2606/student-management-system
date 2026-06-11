@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-management-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-management-system
+  template:
+    metadata:
+      labels:
+        app: student-management-system
+    spec:
+      containers:
+      - name: student-management-system
+        image: student-management-system:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
